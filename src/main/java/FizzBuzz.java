@@ -7,4 +7,6 @@
  */
 public class FizzBuzz {
 
+    public String sayNumber(String pointedWithOne) {
+    }
 }
