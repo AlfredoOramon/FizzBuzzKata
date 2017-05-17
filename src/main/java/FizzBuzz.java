@@ -11,6 +11,8 @@ public class FizzBuzz {
     private static final String TEXT_ONE = "1";
 
     public String sayNumber(int pointedNumber) {
+        if(pointedNumber%3==0)
+            return "Fizz";
         return String.valueOf(pointedNumber);
     }
 }
