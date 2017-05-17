@@ -10,7 +10,7 @@ public class FizzBuzz {
 
     private static final String TEXT_ONE = "1";
 
-    public String sayNumber(int pointedWithOne) {
-        return TEXT_ONE;
+    public String sayNumber(int pointedNumber) {
+        return String.valueOf(pointedNumber);
     }
 }
