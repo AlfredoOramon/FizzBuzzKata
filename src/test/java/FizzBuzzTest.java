@@ -17,36 +17,36 @@ import static org.junit.Assert.assertEquals;
 @RunWith(JUnitParamsRunner.class)
 public class FizzBuzzTest {
 
-    private static final String EXPECTED_ONE="1";
-    private static final String EXPECTED_TWO="1";
+    private static final String EXPECTED_ONE = "1";
+    private static final String EXPECTED_TWO = "1";
 
-    private static final String POINTED_WITH_ONE ="1";
-    private static final String POINTED_WITH_TWO ="2";
+    private static final int POINTED_WITH_ONE = 1;
+    private static final int POINTED_WITH_TWO = 2;
 
     private FizzBuzz SUT;
 
     @Before
-    public void setUp()
-    {
-        SUT=new FizzBuzz();
+    public void setUp() {
+        SUT = new FizzBuzz();
+    }
+
+    //In gogle drive there is a good book that explain this practical unit testing with junit and mockito
+    private static final Object[] getPointedNumbersAndSayNumbers() {
+
+        return new Object[]{
+
+                new Object[]{POINTED_WITH_ONE, EXPECTED_ONE},
+                new Object[]{POINTED_WITH_TWO, EXPECTED_TWO},
+        };
     }
 
     @Test
-    public void sayNumber_WhenYouArePointedWithNumberOne_YouShouldDayOne()
-    {
-        String expected=EXPECTED_ONE;
+    @Parameters(method = "getPointedNumbersAndSayNumbers")
+    public void sayNumber_WhenYouArePointedWithNumberANumber_YouShouldSayExpectedSaidNumber(int pointedNumber, String expectedSaidNumber) {
+        String expected = EXPECTED_ONE;
 
-        String result=SUT.sayNumber(POINTED_WITH_ONE);
+        String result = SUT.sayNumber(pointedNumber);
 
-        assertEquals("You should say one",expected,result);
-    }
-
-    @Test
-    public void sayNumber_WhenYouArePointedWithTwo_YouShouldSayTwo() {
-        final String expected = EXPECTED_TWO;
-        
-        String result = SUT.sayNumber(POINTED_WITH_TWO);
-
-        Assert.assertEquals("You should say two", expected, result);
+        assertEquals("You should say"+expected, expectedSaidNumber, result);
     }
 }
