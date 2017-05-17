@@ -8,11 +8,19 @@
 public class FizzBuzz {
 
 
-    private static final String TEXT_ONE = "1";
+    private static final String FIZZ_TEXT="Fizz";
 
     public String sayNumber(int pointedNumber) {
-        if(pointedNumber%3==0)
-            return "Fizz";
-        return String.valueOf(pointedNumber);
+         return getNumberToSay(pointedNumber);
+    }
+
+    private String getNumberToSay(int pointedNumber) {
+        String result = "";
+        if (MathCalculations.isDivisibleByThree(pointedNumber)) {
+            result = FIZZ_TEXT;
+        } else {
+            result = String.valueOf(pointedNumber);
+        }
+        return result;
     }
 }
