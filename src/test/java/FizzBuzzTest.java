@@ -1,6 +1,7 @@
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -22,12 +23,18 @@ public class FizzBuzzTest {
     private static final String POINTED_WITH_ONE ="1";
     private static final String POINTED_WITH_TWO ="2";
 
+    private FizzBuzz SUT;
+
+    @Before
+    public void setUp()
+    {
+        SUT=new FizzBuzz();
+    }
+
     @Test
     public void sayNumber_WhenYouArePointedWithNumberOne_YouShouldDayOne()
     {
         String expected=EXPECTED_ONE;
-
-        FizzBuzz SUT=new FizzBuzz();
 
         String result=SUT.sayNumber(POINTED_WITH_ONE);
 
@@ -37,8 +44,7 @@ public class FizzBuzzTest {
     @Test
     public void sayNumber_WhenYouArePointedWithTwo_YouShouldSayTwo() {
         final String expected = EXPECTED_TWO;
-
-        FizzBuzz SUT = new FizzBuzz();
+        
         String result = SUT.sayNumber(POINTED_WITH_TWO);
 
         Assert.assertEquals("You should say two", expected, result);
