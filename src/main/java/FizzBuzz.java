@@ -1,3 +1,7 @@
+import com.fizzbuzz.number.impl.ProcessNumber;
+
+import java.util.List;
+
 /**
  * ClassName
  * <p>
@@ -7,22 +11,15 @@
  */
 public class FizzBuzz {
 
+    FizzBuzzProcessor fizzBuzzProcessor;
+
+    public FizzBuzz()
+    {
+        fizzBuzzProcessor=new FizzBuzzProcessor();
+    }
+
     public String sayNumber(int pointedNumber)
     {
-        return processNumberSayNumberOrWord(pointedNumber);
-    }
-
-    private String processNumberSayNumberOrWord(int pointedNumber) {
-        if (isDivisibleByThree(pointedNumber)) return "Fizz";
-        if (pointedNumber%5==0) return "Buzz";
-        return String.valueOf(pointedNumber);
-    }
-
-    private boolean isDivisibleByThree(int pointedNumber) {
-        if(pointedNumber%3==0)
-        {
-            return true;
-        }
-        return false;
+        return fizzBuzzProcessor.processNumberSayNumberOrWord(pointedNumber);
     }
 }
