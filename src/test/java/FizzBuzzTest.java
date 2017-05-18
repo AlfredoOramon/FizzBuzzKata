@@ -27,6 +27,8 @@ public class FizzBuzzTest {
     private static final int POINTED_WITH_THREE = 3;
     private static final int POINTED_WITH_SIX = 6;
     private static final int POINTED_WITH_NINE = 9;
+    
+    private static final int POINTED_WITH_FIVE = 5;
 
 
     private FizzBuzz SUT;
@@ -46,7 +48,7 @@ public class FizzBuzzTest {
                 new Object[]{POINTED_WITH_THREE, EXPECTED_FIZZ},
                 new Object[]{POINTED_WITH_SIX, EXPECTED_FIZZ},
                 new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
-                //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
+                new Object[]{POINTED_WITH_FIVE, EXPECTED_BUZZ},
                 //new Object[]{POINTED_WITH_SIX, EXPECTED_BUZZ},
                 //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
                 //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
