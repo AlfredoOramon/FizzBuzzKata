@@ -9,10 +9,19 @@ public class FizzBuzz {
 
     public String sayNumber(int pointedNumber)
     {
+        return processNumberSayNumberOrWord(pointedNumber);
+    }
+
+    private String processNumberSayNumberOrWord(int pointedNumber) {
+        if (isDivisibleByThree(pointedNumber)) return "Fizz";
+        return String.valueOf(pointedNumber);
+    }
+
+    private boolean isDivisibleByThree(int pointedNumber) {
         if(pointedNumber%3==0)
         {
-            return "Fizz";
+            return true;
         }
-        return String.valueOf(pointedNumber);
+        return false;
     }
 }
