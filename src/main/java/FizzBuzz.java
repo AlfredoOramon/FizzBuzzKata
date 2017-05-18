@@ -7,8 +7,10 @@
  */
 public class FizzBuzz {
 
+    private static final String TEXT_ONE = "1";
+
     public String sayNumber(int pointedNumber)
     {
-        return null;
+        return TEXT_ONE;
     }
 }
