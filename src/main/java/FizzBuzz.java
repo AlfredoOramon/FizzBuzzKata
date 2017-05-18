@@ -14,6 +14,7 @@ public class FizzBuzz {
 
     private String processNumberSayNumberOrWord(int pointedNumber) {
         if (isDivisibleByThree(pointedNumber)) return "Fizz";
+        if (pointedNumber%5==0) return "Buzz";
         return String.valueOf(pointedNumber);
     }
 

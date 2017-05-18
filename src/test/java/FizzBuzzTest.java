@@ -27,7 +27,7 @@ public class FizzBuzzTest {
     private static final int POINTED_WITH_THREE = 3;
     private static final int POINTED_WITH_SIX = 6;
     private static final int POINTED_WITH_NINE = 9;
-    
+
     private static final int POINTED_WITH_FIVE = 5;
 
 
