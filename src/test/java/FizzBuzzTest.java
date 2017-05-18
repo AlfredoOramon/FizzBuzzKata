@@ -43,7 +43,7 @@ public class FizzBuzzTest {
 
                 new Object[]{POINTED_WITH_ONE, EXPECTED_ONE},
                 new Object[]{POINTED_WITH_TWO, EXPECTED_TWO},
-                //new Object[]{POINTED_WITH_THREE, EXPECTED_FIZZ},
+                new Object[]{POINTED_WITH_THREE, EXPECTED_FIZZ},
                 //new Object[]{POINTED_WITH_SIX, EXPECTED_FIZZ},
                 //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
                 //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
