@@ -1,3 +1,5 @@
+package com.fizzbuzz.constants;
+
 /**
  * ClassName
  * <p>

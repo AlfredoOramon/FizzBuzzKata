@@ -1,3 +1,5 @@
+package com.fizzbuzz.utils;
+
 /**
  * ClassName
  * <p>

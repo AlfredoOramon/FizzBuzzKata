@@ -1,6 +1,5 @@
-import com.fizzbuzz.number.impl.ProcessNumber;
-
-import java.util.List;
+import com.fizzbuzz.number.impl.DivisableByFiveProccesor;
+import com.fizzbuzz.number.impl.DivisableByThreeProcessor;
 
 /**
  * ClassName
@@ -16,6 +15,8 @@ public class FizzBuzz {
     public FizzBuzz()
     {
         fizzBuzzProcessor=new FizzBuzzProcessor();
+        fizzBuzzProcessor.addProcessor(new DivisableByThreeProcessor());
+        fizzBuzzProcessor.addProcessor(new DivisableByFiveProccesor());
     }
 
     public String sayNumber(int pointedNumber)

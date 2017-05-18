@@ -7,7 +7,7 @@ package com.fizzbuzz.number.impl;
  * <p>
  * Date: 18/05/17 10:10
  */
-public interface ProcessNumber
+public interface IProcessNumber
 {
     String getText(int pointedNumber);
 }
