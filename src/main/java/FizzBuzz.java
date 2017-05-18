@@ -7,4 +7,8 @@
  */
 public class FizzBuzz {
 
+    public String sayNumber(int pointedNumber)
+    {
+        return null;
+    }
 }
