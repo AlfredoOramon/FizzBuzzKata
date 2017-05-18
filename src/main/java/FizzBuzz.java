@@ -9,6 +9,10 @@ public class FizzBuzz {
 
     public String sayNumber(int pointedNumber)
     {
+        if(pointedNumber%3==0)
+        {
+            return "Fizz";
+        }
         return String.valueOf(pointedNumber);
     }
 }
