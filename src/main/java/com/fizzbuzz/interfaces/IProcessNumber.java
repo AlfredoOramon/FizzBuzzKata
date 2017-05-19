@@ -1,4 +1,4 @@
-package com.fizzbuzz.number.impl;
+package com.fizzbuzz.interfaces;
 
 /**
  * ClassName
@@ -9,5 +9,5 @@ package com.fizzbuzz.number.impl;
  */
 public interface IProcessNumber
 {
-    String getText(int pointedNumber);
+    String getWordToSay(int pointedNumber);
 }

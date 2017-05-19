@@ -1,7 +1,6 @@
-import com.fizzbuzz.number.impl.IProcessNumber;
+import com.fizzbuzz.interfaces.IProcessNumber;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +14,10 @@ public class FizzBuzzProcessor {
 
     private List<IProcessNumber> processorList;
 
+    public FizzBuzzProcessor(List<IProcessNumber> processorList) {
+        this.processorList = processorList;
+    }
+
     public String processNumberSayNumberOrWord(int pointedNumber) {
 
         return processNumber(pointedNumber);
@@ -23,7 +26,7 @@ public class FizzBuzzProcessor {
     private String processNumber(int pointedNumber) {
         String result = "";
         for (IProcessNumber processNumber : processorList) {
-            result += processNumber.getText(pointedNumber);
+            result += processNumber.getWordToSay(pointedNumber);
         }
         return shouldReturnSameNumberIfEmpty(pointedNumber, result);
     }
@@ -33,16 +36,5 @@ public class FizzBuzzProcessor {
             result = String.valueOf(pointedNumber);
         }
         return result;
-    }
-
-    public List<IProcessNumber> getProcessorList() {
-        if (processorList == null) {
-            processorList = new ArrayList<IProcessNumber>();
-        }
-        return processorList;
-    }
-
-    public void addProcessor(IProcessNumber divisableByThreeProcessor) {
-        getProcessorList().add(divisableByThreeProcessor);
     }
 }

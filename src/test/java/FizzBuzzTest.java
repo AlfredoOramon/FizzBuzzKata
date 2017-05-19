@@ -1,6 +1,5 @@
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +20,7 @@ public class FizzBuzzTest {
     private static final String EXPECTED_TWO = "2";
     private static final String EXPECTED_FIZZ = "Fizz";
     private static final String EXPECTED_BUZZ = "Buzz";
+    private static final String EXPECTED_FIZZBUZZ = "FizzBuzz";
 
     private static final int POINTED_WITH_ONE = 1;
     private static final int POINTED_WITH_TWO = 2;
@@ -28,6 +28,8 @@ public class FizzBuzzTest {
     private static final int POINTED_WITH_SIX = 6;
     private static final int POINTED_WITH_NINE = 9;
     private static final int POINTED_WITH_FIVE = 5;
+    private static final int POINTED_WITH_TEN = 10;
+    private static final int POINTED_WITH_FIVETEEN = 15;
 
 
     private FizzBuzz SUT;
@@ -48,9 +50,8 @@ public class FizzBuzzTest {
                 new Object[]{POINTED_WITH_SIX, EXPECTED_FIZZ},
                 new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
                 new Object[]{POINTED_WITH_FIVE, EXPECTED_BUZZ},
-                //new Object[]{POINTED_WITH_SIX, EXPECTED_BUZZ},
-                //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
-                //new Object[]{POINTED_WITH_NINE, EXPECTED_FIZZ},
+                new Object[]{POINTED_WITH_TEN, EXPECTED_BUZZ},
+                new Object[]{POINTED_WITH_FIVETEEN, EXPECTED_FIZZBUZZ},
         };
     }
 
